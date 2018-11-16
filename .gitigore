@@ -1,0 +1,6 @@
+.vscode
+./src/github.com/
+*.DS_Store
+*.so
+*.log
+demo.out
