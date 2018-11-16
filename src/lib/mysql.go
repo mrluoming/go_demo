@@ -18,9 +18,15 @@ func ConnectMySQL(user string, pwd string, ip string, port int, dbName string) (
 	db, err := sql.Open("mysql", connString)
 	if err != nil {
 		fmt.Println("connect failed for connString:", connString)
-		fmt.Println(err)
 		return nil, err
 	}
+	//先执行一次select now()
+	_,serr := db.Query("select now();")
+	if serr != nil {
+		fmt.Println("connect failed for when select,connString:", connString)
+		return nil, serr
+	}
+
 	mydb := &MyDb{DB: db}
 	fmt.Println("connect successfully for connString:", connString)
 	return mydb, nil

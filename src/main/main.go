@@ -60,7 +60,7 @@ func main() {
     lib.WriteToFile(path + "/lm.txt", "ok!\n")
 
     //mysql
-    /*
+    
     db, err := lib.ConnectMySQL("user", "password", "127.0.0.1", 3306, "testdb")
 
 	if err != nil || db == nil {
@@ -83,7 +83,7 @@ func main() {
 		fmt.Println(id, name)
     }
     defer rows.Close()
-    */
+    
 
     //oob encapsulation
     studentObj := lib.Student{ Score:"31"}
