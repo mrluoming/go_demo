@@ -1,5 +1,5 @@
 # Go demo
-go demo：包引用、数组、for、指针、切片、文件读写，mysql访问、oob思想
+go demo：包引用、数组、for、指针、切片、文件读写，mysql访问、oop思想
 
 ## 要求
 go版本：1.10.x以上
